@@ -15,7 +15,13 @@
 		DF82F0F12342925A00CCF7B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF82F0F02342925A00CCF7B3 /* Assets.xcassets */; };
 		DF82F0F42342925A00CCF7B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF82F0F22342925A00CCF7B3 /* LaunchScreen.storyboard */; };
 		DF82F0FF2342925B00CCF7B3 /* Persistence_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F0FE2342925B00CCF7B3 /* Persistence_LabTests.swift */; };
-		DF82F10C23429B9C00CCF7B3 /* Pixabay.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F10B23429B9C00CCF7B3 /* Pixabay.swift */; };
+		DF82F1102342B07200CCF7B3 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F10F2342B07200CCF7B3 /* NetworkHelper.swift */; };
+		DF82F1122342B09F00CCF7B3 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1112342B09F00CCF7B3 /* AppError.swift */; };
+		DF82F1142342B0C800CCF7B3 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1132342B0C800CCF7B3 /* ImageHelper.swift */; };
+		DF82F1162342B12300CCF7B3 /* PixabayAPIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1152342B12300CCF7B3 /* PixabayAPIHelper.swift */; };
+		DF82F1182342B17600CCF7B3 /* PixabayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1172342B17600CCF7B3 /* PixabayWrapper.swift */; };
+		DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */; };
+		DF82F1212342C19C00CCF7B3 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +47,13 @@
 		DF82F0FA2342925A00CCF7B3 /* Persistence-LabTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Persistence-LabTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF82F0FE2342925B00CCF7B3 /* Persistence_LabTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence_LabTests.swift; sourceTree = "<group>"; };
 		DF82F1002342925B00CCF7B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DF82F10B23429B9C00CCF7B3 /* Pixabay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixabay.swift; sourceTree = "<group>"; };
+		DF82F10F2342B07200CCF7B3 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		DF82F1112342B09F00CCF7B3 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DF82F1132342B0C800CCF7B3 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		DF82F1152342B12300CCF7B3 /* PixabayAPIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayAPIHelper.swift; sourceTree = "<group>"; };
+		DF82F1172342B17600CCF7B3 /* PixabayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayWrapper.swift; sourceTree = "<group>"; };
+		DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPIKey.swift; sourceTree = "<group>"; };
+		DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PicCollectionViewCell.swift; path = "Persistence-Lab/Model/PicCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				DF82F0EA2342925800CCF7B3 /* Main.storyboard */,
+				DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,7 +135,10 @@
 		DF82F10D23429BB000CCF7B3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DF82F10B23429B9C00CCF7B3 /* Pixabay.swift */,
+				DF82F1172342B17600CCF7B3 /* PixabayWrapper.swift */,
+				DF82F1152342B12300CCF7B3 /* PixabayAPIHelper.swift */,
+				DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */,
+				DF82F1192342B22800CCF7B3 /* Network */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -135,6 +151,16 @@
 				DF82F0F22342925A00CCF7B3 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DF82F1192342B22800CCF7B3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DF82F10F2342B07200CCF7B3 /* NetworkHelper.swift */,
+				DF82F1112342B09F00CCF7B3 /* AppError.swift */,
+				DF82F1132342B0C800CCF7B3 /* ImageHelper.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,11 +264,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF82F1212342C19C00CCF7B3 /* PicCollectionViewCell.swift in Sources */,
+				DF82F1162342B12300CCF7B3 /* PixabayAPIHelper.swift in Sources */,
 				DF82F0E92342925800CCF7B3 /* FirstViewController.swift in Sources */,
 				DF82F0E52342925800CCF7B3 /* AppDelegate.swift in Sources */,
-				DF82F10C23429B9C00CCF7B3 /* Pixabay.swift in Sources */,
+				DF82F1182342B17600CCF7B3 /* PixabayWrapper.swift in Sources */,
 				DF82F0E72342925800CCF7B3 /* SceneDelegate.swift in Sources */,
+				DF82F1102342B07200CCF7B3 /* NetworkHelper.swift in Sources */,
+				DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */,
 				DF82F0EF2342925800CCF7B3 /* Persistence_Lab.xcdatamodeld in Sources */,
+				DF82F1122342B09F00CCF7B3 /* AppError.swift in Sources */,
+				DF82F1142342B0C800CCF7B3 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Pursuit.Persistence-Lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -430,7 +462,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Pursuit.Persistence-Lab";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
