@@ -75,17 +75,46 @@
             </objects>
             <point key="canvasLocation" x="2833.3333333333335" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Picture Detail View Controller-->
         <scene sceneID="0gH-8i-oq2">
             <objects>
-                <viewController id="r87-b4-PJv" sceneMemberID="viewController">
+                <viewController id="r87-b4-PJv" customClass="PictureDetailViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xnz-vY-C97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-Uj-Kux" userLabel="Detail Image">
+                                <rect key="frame" x="0.0" y="116" width="414" height="400"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="400" id="B3e-rq-al0"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPD-FX-Oxx">
+                                <rect key="frame" x="157" y="642" width="116" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="heart.fill" catalog="system">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="FAVORITE">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="8m6-Uj-Kux" firstAttribute="centerX" secondItem="0cq-YG-nSe" secondAttribute="centerX" id="Nic-GU-LMT"/>
+                            <constraint firstItem="8m6-Uj-Kux" firstAttribute="leading" secondItem="0cq-YG-nSe" secondAttribute="leading" id="hYR-If-fjg"/>
+                            <constraint firstItem="8m6-Uj-Kux" firstAttribute="top" secondItem="0cq-YG-nSe" secondAttribute="top" constant="116" id="hsB-cC-vQC"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="0cq-YG-nSe"/>
                     </view>
                     <navigationItem key="navigationItem" id="Nw5-IT-boX"/>
+                    <connections>
+                        <outlet property="detailImage" destination="8m6-Uj-Kux" id="PWr-p5-n0E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fx-fp-Sfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,6 +140,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart.fill" catalog="system" width="64" height="58"/>
         <image name="magnifyingglass" catalog="system" width="64" height="60"/>
     </resources>
 </document>

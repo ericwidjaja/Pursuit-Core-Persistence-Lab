@@ -17,7 +17,7 @@ class ImageHelper {
         guard let url = URL(string: urlString) else {
            return completionHandler(.failure(.badURL))
         }
-        NetworkHelper.manager.performDataTask(withUrl: url, andMethod: .get) { (result) in
+        NetworkHelper.manager.performDataTask(withUrl: url, andMethod: HTTPMethod.get) { (result) in
             switch result {
             case .failure(let error):
                 completionHandler(.failure(error))

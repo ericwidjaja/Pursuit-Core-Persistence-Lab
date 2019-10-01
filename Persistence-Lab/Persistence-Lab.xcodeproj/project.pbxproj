@@ -22,6 +22,7 @@
 		DF82F1182342B17600CCF7B3 /* PixabayWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1172342B17600CCF7B3 /* PixabayWrapper.swift */; };
 		DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */; };
 		DF82F1212342C19C00CCF7B3 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */; };
+		DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		DF82F1172342B17600CCF7B3 /* PixabayWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixabayWrapper.swift; sourceTree = "<group>"; };
 		DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPIKey.swift; sourceTree = "<group>"; };
 		DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PicCollectionViewCell.swift; path = "Persistence-Lab/Model/PicCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				DF82F0E82342925800CCF7B3 /* FirstViewController.swift */,
+				DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */,
 				DF82F0EF2342925800CCF7B3 /* Persistence_Lab.xcdatamodeld in Sources */,
 				DF82F1122342B09F00CCF7B3 /* AppError.swift in Sources */,
+				DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */,
 				DF82F1142342B0C800CCF7B3 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

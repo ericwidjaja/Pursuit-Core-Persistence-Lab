@@ -17,12 +17,6 @@ class FirstViewController: UIViewController {
             picsCollectionView.reloadData()}
     }
     
-//    var searchString: String? = nil {
-//        didSet {
-//            loadPhotoSearchData()}
-//    }
-//
-    
     //MARK: - IBOutlets
     @IBOutlet weak var picSearchBar: UISearchBar!
     
@@ -93,6 +87,15 @@ extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSou
             }
         }
         return cell
+    }
+    //MARK: - Navigation
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectedCell = sender as! PicCollectionViewCell
+        let index = (picsCollectionView.indexPath(for: selectedCell)?.row)!
+        if segue.identifier == "segue" {
+            let destination = segue.destination as! PictureDetailViewController
+            destination.picture = searchResults[index]
+        }
     }
 }
 
