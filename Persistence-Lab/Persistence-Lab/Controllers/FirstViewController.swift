@@ -10,18 +10,18 @@ import UIKit
 
 class FirstViewController: UIViewController {
     
-    var photos = [Photos]() {
+    //MARK: - Properties
+
+    var searchResults = [Photos]() {
         didSet {
-            picsCollectionView.reloadData()
-        }
+            picsCollectionView.reloadData()}
     }
     
-    var searchString: String? = nil {
-        didSet {
-            loadPhotoSearchData()
-        }
-    }
-    
+//    var searchString: String? = nil {
+//        didSet {
+//            loadPhotoSearchData()}
+//    }
+//
     
     //MARK: - IBOutlets
     @IBOutlet weak var picSearchBar: UISearchBar!
@@ -34,18 +34,15 @@ class FirstViewController: UIViewController {
         picsCollectionView.dataSource = self
         picSearchBar.delegate = self
     }
-    
-
-    private func loadPhotoSearchData() {
-        guard let picSearchString = searchString else  {return}
-        guard searchString != "" else {return}
-        let urlFromSearch = SecretAPIKey.getUrlWith(query: picSearchString); PixabayApiHelper.manager.getPixabayWrapper(urlString: urlFromSearch) {(result) in
+    private func loadPhotoSearchData(str: String) {
+        PixabayApiHelper.manager.getPixabayWrapper(str: str) {(result) in
+            DispatchQueue.main.async {
             switch result {
             case .failure(let error):
                 print(error)
-            case .success(let wrapper):
-                DispatchQueue.main.async {
-                    self.photos = wrapper.hits
+            case .success(let results):
+                
+                self.searchResults = results.hits
                 }
             }
         }
@@ -53,42 +50,49 @@ class FirstViewController: UIViewController {
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
-        super.viewDidLoad()
         setUpDelegates()
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
     }
-
-
 }
+
+
 //MARK: - Extensions
 
 extension FirstViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        searchString = searchBar.text
+func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    var searchString = searchBar.text ?? ""
+    searchString = searchString.lowercased().replacingOccurrences(of: " ", with: "+")
+    loadPhotoSearchData(str: searchString)
+    print(searchString)
     }
 }
-
-extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return searchResults.count
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = picsCollectionView.dequeueReusableCell(withReuseIdentifier: "picCell", for: indexPath) as? PicCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        let photo = photos[indexPath.row]
-        ImageHelper.manager.getImage(urlString: photo.webformatURL) { (result) in
+            return UICollectionViewCell()}
+        let photo = searchResults[indexPath.row]
+        ImageHelper.manager.getImage(urlString: photo.previewURL) { (result) in
+            DispatchQueue.main.async {
             switch result {
                 case .failure(let error):
                     print(error)
-            case .success(let image):
-                DispatchQueue.main.async {
+                case .success(let image):
                     cell.picImageView.image = image
+                    print("image load successfully")
                 }
             }
         }
         return cell
-    }
-
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        photos.count
     }
 }
 

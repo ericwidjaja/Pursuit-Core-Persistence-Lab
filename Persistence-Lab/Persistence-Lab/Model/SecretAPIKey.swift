@@ -10,9 +10,4 @@ import Foundation
 
 struct SecretAPIKey {
     static let apiKey = "13797079-1da769e52f4691c85dcbdcd6b"
-    
-    static func getUrlWith(query: String) -> String {
-        let query = query.lowercased()
-        return "https://pixabay.com/api/?key=\(self.apiKey)&q=\(query)"
-    }
 }

@@ -12,9 +12,10 @@ class PixabayApiHelper {
     private init() {}
     static let manager = PixabayApiHelper()
     
-    func getPixabayWrapper(urlString: String,completionHandler: @escaping (Result<PixabayWrapper,AppError>) -> ()) {
-        guard let url = URL(string: urlString) else {
-            return completionHandler(.failure(.badURL))
+    func getPixabayWrapper(str: String,completionHandler: @escaping (Result<PixabayWrapper,AppError>) -> ()) {
+        let key = SecretAPIKey.apiKey
+        guard let url = URL(string: "https://pixabay.com/api/?key=\(key)&q=\(str)") else {completionHandler(.failure(.badURL))
+            return
         }
         NetworkHelper.manager.performDataTask(withUrl: url, andMethod: .get) { (result) in
             switch result {
@@ -24,8 +25,7 @@ class PixabayApiHelper {
                 do {
                     let wrapper = try JSONDecoder().decode(PixabayWrapper.self, from: data)
                     completionHandler(.success(wrapper))
-                } catch {
-                    completionHandler(.failure(.couldNotParseJSON(rawError: error)))
+                } catch { completionHandler(.failure(.couldNotParseJSON(rawError: error)))
                 }
             }
         }
