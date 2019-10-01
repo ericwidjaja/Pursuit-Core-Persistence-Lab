@@ -89,15 +89,7 @@ extension FirstViewController: UICollectionViewDelegate, UICollectionViewDataSou
         return cell
     }
     //MARK: - Navigation
-//        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let selectedCell = sender as! PicCollectionViewCell
-//        let index = (picsCollectionView.indexPath(for: selectedCell)?.row)!
-//        if segue.identifier == "segue" {
-//            let destination = segue.destination as! PictureDetailViewController
-//            destination.picture = searchResults[index]
-//
-//        }
-//    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let destination = segue.destination as? PictureDetailViewController,
             let selectedCell = sender as? PicCollectionViewCell,

@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="90" width="414" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -62,7 +62,9 @@
                         <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZDA-Eo-bZA"/>
+                    <navigationItem key="navigationItem" id="ZDA-Eo-bZA" userLabel="PICS" colorLabel="IBBuiltInLabel-Blue">
+                        <barButtonItem key="backBarButtonItem" title="PICS" id="zbf-24-wAy"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="picSearchBar" destination="9Ol-x3-Qen" id="pc0-w8-VWK"/>
                         <outlet property="picsCollectionView" destination="QPG-Oy-gaR" id="Rmo-hR-TUM"/>
@@ -70,7 +72,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743.4782608695655" y="136.60714285714286"/>
+            <point key="canvasLocation" x="3342" y="-165"/>
         </scene>
         <!--Picture Detail View Controller-->
         <scene sceneID="0gH-8i-oq2">
@@ -95,6 +97,9 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title=" F A V E" image="heart.fill" catalog="system"/>
+                                <connections>
+                                    <segue destination="yy5-GQ-XjW" kind="show" id="Fod-SK-h1H"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="00P-LR-tPd">
                                 <rect key="frame" x="42" y="446" width="330" height="31"/>
@@ -161,7 +166,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fx-fp-Sfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4534.7826086956529" y="130.58035714285714"/>
+            <point key="canvasLocation" x="4045" y="-165"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="tek-ll-4gz">
+            <objects>
+                <viewController id="yy5-GQ-XjW" customClass="FavoritesViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nvR-mj-mbc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q3c-Ft-bvp">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="faveCell" rowHeight="133" id="B9g-ir-UUg">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="133"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="B9g-ir-UUg" id="VFm-5L-RFt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j5x-yv-51w">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="j5x-yv-51w" firstAttribute="centerX" secondItem="VFm-5L-RFt" secondAttribute="centerX" id="A8a-rp-hUN"/>
+                                                <constraint firstItem="j5x-yv-51w" firstAttribute="leading" secondItem="VFm-5L-RFt" secondAttribute="leadingMargin" constant="-20" id="I0g-Ls-4K0"/>
+                                                <constraint firstItem="j5x-yv-51w" firstAttribute="centerY" secondItem="VFm-5L-RFt" secondAttribute="centerY" id="R71-k4-FhV"/>
+                                                <constraint firstItem="j5x-yv-51w" firstAttribute="top" secondItem="VFm-5L-RFt" secondAttribute="topMargin" constant="-11" id="vf4-wP-LrG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Q3c-Ft-bvp" firstAttribute="leading" secondItem="79e-mM-aO7" secondAttribute="leading" id="65I-km-p2K"/>
+                            <constraint firstItem="79e-mM-aO7" firstAttribute="bottom" secondItem="Q3c-Ft-bvp" secondAttribute="bottom" id="Cbf-6W-yd3"/>
+                            <constraint firstItem="79e-mM-aO7" firstAttribute="trailing" secondItem="Q3c-Ft-bvp" secondAttribute="trailing" id="FPY-kj-fWi"/>
+                            <constraint firstItem="Q3c-Ft-bvp" firstAttribute="centerX" secondItem="79e-mM-aO7" secondAttribute="centerX" id="kYp-TF-Rf1"/>
+                            <constraint firstItem="Q3c-Ft-bvp" firstAttribute="top" secondItem="79e-mM-aO7" secondAttribute="top" id="knM-l3-FSJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="79e-mM-aO7"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="u4v-J3-aRs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ha7-hI-mzL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3706" y="488"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Lqm-yP-E35">
@@ -171,10 +226,13 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nOM-fu-0YJ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Q66-Iv-dGm" kind="relationship" relationship="viewControllers" id="MYr-Q7-daa"/>
+                        <segue destination="pf7-in-Ewd" kind="relationship" relationship="viewControllers" id="bpK-rT-p4K"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w7A-lp-sg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -189,9 +247,15 @@
                         <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LNH-y6-anB">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="LNH-y6-anB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textShadowColor" systemColor="systemIndigoColor" red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -200,11 +264,35 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8r-7G-86n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2833.3333333333335" y="136.60714285714286"/>
+            <point key="canvasLocation" x="2687" y="-165"/>
+        </scene>
+        <!--F A V E-->
+        <scene sceneID="rGM-B1-U8X">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pf7-in-Ewd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="F A V E" image="heart.fill" catalog="system" selectedImage="heart.fill" id="f6o-cx-yP4">
+                        <color key="badgeColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pAZ-Ln-hOq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yy5-GQ-XjW" kind="relationship" relationship="rootViewController" id="qwb-2a-hbM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vyr-tD-qHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2687" y="488"/>
         </scene>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="58"/>
         <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fod-SK-h1H"/>
+    </inferredMetricsTieBreakers>
 </document>
