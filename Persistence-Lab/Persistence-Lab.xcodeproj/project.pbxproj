@@ -23,6 +23,8 @@
 		DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */; };
 		DF82F1212342C19C00CCF7B3 /* PicCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */; };
 		DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */; };
+		DF82F1252343965F00CCF7B3 /* PhotoPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1242343965F00CCF7B3 /* PhotoPersistenceHelper.swift */; };
+		DF82F1282343979600CCF7B3 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1272343979600CCF7B3 /* PersistenceHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		DF82F11A2342B29700CCF7B3 /* SecretAPIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretAPIKey.swift; sourceTree = "<group>"; };
 		DF82F1202342C19C00CCF7B3 /* PicCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PicCollectionViewCell.swift; path = "Persistence-Lab/Model/PicCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
 		DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
+		DF82F1242343965F00CCF7B3 /* PhotoPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPersistenceHelper.swift; sourceTree = "<group>"; };
+		DF82F1272343979600CCF7B3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 		DF82F0E32342925800CCF7B3 /* Persistence-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				DF82F1262343967400CCF7B3 /* Persistence */,
 				DF82F10D23429BB000CCF7B3 /* Model */,
 				DF82F1092342926D00CCF7B3 /* View */,
 				DF82F10A2342927600CCF7B3 /* Controllers */,
@@ -164,6 +169,15 @@
 				DF82F1132342B0C800CCF7B3 /* ImageHelper.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		DF82F1262343967400CCF7B3 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				DF82F1242343965F00CCF7B3 /* PhotoPersistenceHelper.swift */,
+				DF82F1272343979600CCF7B3 /* PersistenceHelper.swift */,
+			);
+			path = Persistence;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,11 +284,13 @@
 				DF82F1212342C19C00CCF7B3 /* PicCollectionViewCell.swift in Sources */,
 				DF82F1162342B12300CCF7B3 /* PixabayAPIHelper.swift in Sources */,
 				DF82F0E92342925800CCF7B3 /* FirstViewController.swift in Sources */,
+				DF82F1282343979600CCF7B3 /* PersistenceHelper.swift in Sources */,
 				DF82F0E52342925800CCF7B3 /* AppDelegate.swift in Sources */,
 				DF82F1182342B17600CCF7B3 /* PixabayWrapper.swift in Sources */,
 				DF82F0E72342925800CCF7B3 /* SceneDelegate.swift in Sources */,
 				DF82F1102342B07200CCF7B3 /* NetworkHelper.swift in Sources */,
 				DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */,
+				DF82F1252343965F00CCF7B3 /* PhotoPersistenceHelper.swift in Sources */,
 				DF82F0EF2342925800CCF7B3 /* Persistence_Lab.xcdatamodeld in Sources */,
 				DF82F1122342B09F00CCF7B3 /* AppError.swift in Sources */,
 				DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */,

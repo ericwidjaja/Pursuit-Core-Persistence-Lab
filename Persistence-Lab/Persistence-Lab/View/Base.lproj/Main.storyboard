@@ -11,23 +11,23 @@
         <!--FirstViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="FirstViewController" customClass="FirstViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="BYZ-38-t0r" userLabel="FirstViewController" customClass="FirstViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="prominent" placeholder="Search Pics..." showsSearchResultsButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-x3-Qen">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search Pics..." translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-x3-Qen">
                                 <rect key="frame" x="0.0" y="90" width="414" height="56"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QPG-Oy-gaR">
                                 <rect key="frame" x="0.0" y="147" width="414" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="5" id="2P7-ad-c4b">
                                     <size key="itemSize" width="133" height="145"/>
                                     <size key="estimatedItemSize" width="133" height="145"/>
@@ -51,19 +51,19 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="133" height="145"/>
                                         <connections>
-                                            <outlet property="picImageView" destination="ExJ-v4-iC7" id="mIC-Yg-GqA"/>
-                                            <segue destination="r87-b4-PJv" kind="show" id="OCt-7z-RPf"/>
+                                            <outlet property="picImageView" destination="ExJ-v4-iC7" id="zms-jB-36h"/>
+                                            <segue destination="r87-b4-PJv" kind="show" id="4Sj-DP-8u0"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PICS" image="magnifyingglass" catalog="system" largeContentSizeImage="magnifyingglass" selectedImage="magnifyingglass" id="w6p-AJ-sE5">
-                        <color key="badgeColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <tabBarItem key="tabBarItem" largeContentSizeImage="square.and.arrow.up" catalog="system" systemItem="search" id="w6p-AJ-sE5">
+                        <color key="badgeColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="ZDA-Eo-bZA"/>
                     <connections>
@@ -78,33 +78,24 @@
         <!--Picture Detail View Controller-->
         <scene sceneID="0gH-8i-oq2">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Fx-fp-Sfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="r87-b4-PJv" customClass="PictureDetailViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xnz-vY-C97">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-Uj-Kux" userLabel="Detail Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8m6-Uj-Kux" userLabel="Detail Image">
                                 <rect key="frame" x="20" y="88" width="374" height="329"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="329" id="B3e-rq-al0"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JPD-FX-Oxx">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPD-FX-Oxx">
                                 <rect key="frame" x="157" y="642" width="116" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="heart.fill" catalog="system">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="FAVORITE">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name=".AppleSystemUIFont"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
+                                <state key="normal" title="F A V E" image="heart.fill" catalog="system"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8m6-Uj-Kux" firstAttribute="centerX" secondItem="0cq-YG-nSe" secondAttribute="centerX" id="Nic-GU-LMT"/>
                             <constraint firstItem="8m6-Uj-Kux" firstAttribute="leading" secondItem="0cq-YG-nSe" secondAttribute="leading" constant="20" id="hYR-If-fjg"/>
@@ -112,10 +103,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0cq-YG-nSe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="yPN-My-P80"/>
                     <connections>
                         <outlet property="detailImage" destination="8m6-Uj-Kux" id="JOj-sa-YeI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Fx-fp-Sfm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3626.0869565217395" y="130.58035714285714"/>
         </scene>
@@ -140,6 +133,6 @@
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="58"/>
-        <image name="magnifyingglass" catalog="system" width="64" height="60"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
     </resources>
 </document>

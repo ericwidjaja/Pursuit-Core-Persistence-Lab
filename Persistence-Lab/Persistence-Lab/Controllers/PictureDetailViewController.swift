@@ -19,8 +19,8 @@ class PictureDetailViewController: UIViewController {
     
     
     private func loadDetails() {
-        guard let detailPic = picture else {return}
-        ImageHelper.manager.getImage(urlString: detailPic.largeImageURL) { (result) in
+        guard let detailImage = picture else {return}
+        ImageHelper.manager.getImage(urlString: detailImage.largeImageURL) { (result) in
             DispatchQueue.main.async {
             switch result {
             case .success(let image):
@@ -30,7 +30,6 @@ class PictureDetailViewController: UIViewController {
                 }
             }
         }
-        
     }
     
     
