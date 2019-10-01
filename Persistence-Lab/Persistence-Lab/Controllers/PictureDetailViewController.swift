@@ -19,7 +19,8 @@ class PictureDetailViewController: UIViewController {
     
     
     private func loadDetails() {
-        ImageHelper.manager.getImage(urlString: picture!.largeImageURL) { (result) in
+        guard let detailPic = picture else {return}
+        ImageHelper.manager.getImage(urlString: detailPic.largeImageURL) { (result) in
             DispatchQueue.main.async {
             switch result {
             case .success(let image):
