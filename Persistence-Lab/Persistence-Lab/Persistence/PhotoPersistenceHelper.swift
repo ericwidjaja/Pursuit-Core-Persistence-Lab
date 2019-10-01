@@ -10,6 +10,7 @@ import Foundation
 
 class PhotoPersistenceHelper {
     static let manager = PhotoPersistenceHelper ()
+    
     func savePhotos(newPhoto: Photos) throws {
         
         try persistenceHelper.save(newElement: newPhoto)

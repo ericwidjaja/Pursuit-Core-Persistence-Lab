@@ -11,9 +11,7 @@ import UIKit
 class PictureDetailViewController: UIViewController {
     
     //MARK: Property & IBOutlets
-    
     var picture: Photos?
-    
     
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var tagsLabel: UILabel!
@@ -33,20 +31,30 @@ class PictureDetailViewController: UIViewController {
                 }
             }
         }
-        tagsLabel.text = " Tags:  \(String(describing: detailImage.tags))"
+        tagsLabel.text = " Tags#:  \(String(describing: detailImage.tags))"
         favoriteLabel.text = " Favorites:  \(detailImage.favorites ?? Int())"
-        likesLabel.text = " Likes:  \(detailImage.likes ?? Int())"
+        likesLabel.text = " 👍  \(detailImage.likes ?? Int())"
         
     }
+    //MARK: - IBAction
+    @IBAction func favoriteButton(_ sender: UIButton) {
+        do{
+            try PhotoPersistenceHelper.manager.savePhotos(newPhoto: picture!)
+        }
+        catch {
+            print(error)
+        }
+    }
     
+    //MARK: - Attempting to segue data
     override func viewWillAppear(_ animated: Bool) {
         dump(picture)
     }
     
-    
+    //MARK: - LifeCycle
     override func viewDidLoad() {
-        loadDetails()
         super.viewDidLoad()
-
+        loadDetails()
+        
     }
 }

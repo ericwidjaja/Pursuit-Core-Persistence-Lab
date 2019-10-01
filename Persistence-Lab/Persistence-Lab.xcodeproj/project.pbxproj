@@ -25,6 +25,8 @@
 		DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */; };
 		DF82F1252343965F00CCF7B3 /* PhotoPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1242343965F00CCF7B3 /* PhotoPersistenceHelper.swift */; };
 		DF82F1282343979600CCF7B3 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1272343979600CCF7B3 /* PersistenceHelper.swift */; };
+		DF82F15F2343F65100CCF7B3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F15E2343F65100CCF7B3 /* FavoritesViewController.swift */; };
+		DF82F1632343F9E000CCF7B3 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF82F1622343F9E000CCF7B3 /* FavoriteTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
 		DF82F1242343965F00CCF7B3 /* PhotoPersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPersistenceHelper.swift; sourceTree = "<group>"; };
 		DF82F1272343979600CCF7B3 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		DF82F15E2343F65100CCF7B3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		DF82F1622343F9E000CCF7B3 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteTableViewCell.swift; path = "Persistence-Lab/View/FavoriteTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		DF82F0D82342925800CCF7B3 = {
 			isa = PBXGroup;
 			children = (
+				DF82F1622343F9E000CCF7B3 /* FavoriteTableViewCell.swift */,
 				DF82F0E32342925800CCF7B3 /* Persistence-Lab */,
 				DF82F0FD2342925B00CCF7B3 /* Persistence-LabTests */,
 				DF82F0E22342925800CCF7B3 /* Products */,
@@ -136,6 +141,7 @@
 			children = (
 				DF82F0E82342925800CCF7B3 /* FirstViewController.swift */,
 				DF82F1222343101200CCF7B3 /* PictureDetailViewController.swift */,
+				DF82F15E2343F65100CCF7B3 /* FavoritesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -290,10 +296,12 @@
 				DF82F0E72342925800CCF7B3 /* SceneDelegate.swift in Sources */,
 				DF82F1102342B07200CCF7B3 /* NetworkHelper.swift in Sources */,
 				DF82F11B2342B29700CCF7B3 /* SecretAPIKey.swift in Sources */,
+				DF82F1632343F9E000CCF7B3 /* FavoriteTableViewCell.swift in Sources */,
 				DF82F1252343965F00CCF7B3 /* PhotoPersistenceHelper.swift in Sources */,
 				DF82F0EF2342925800CCF7B3 /* Persistence_Lab.xcdatamodeld in Sources */,
 				DF82F1122342B09F00CCF7B3 /* AppError.swift in Sources */,
 				DF82F1232343101200CCF7B3 /* PictureDetailViewController.swift in Sources */,
+				DF82F15F2343F65100CCF7B3 /* FavoritesViewController.swift in Sources */,
 				DF82F1142342B0C800CCF7B3 /* ImageHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

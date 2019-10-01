@@ -19,7 +19,6 @@ class FirstViewController: UIViewController {
     
     //MARK: - IBOutlets
     @IBOutlet weak var picSearchBar: UISearchBar!
-    
     @IBOutlet weak var picsCollectionView: UICollectionView!
     
     //MARK: - Functions
